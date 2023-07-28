@@ -15,6 +15,11 @@ struct ContentView: View {
                 } label: {
                     Text("2. CosmosView")
                 }
+                NavigationLink {
+                    AsyncAwaitCombine()
+                } label: {
+                    Text("3. AsyncAwaitCombine")
+                }
             }
             .font(.title)
         }
