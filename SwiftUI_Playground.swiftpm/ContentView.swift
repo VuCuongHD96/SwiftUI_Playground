@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-        
+
     var body: some View {
         NavigationView {
             List {
@@ -20,6 +20,12 @@ struct ContentView: View {
                 } label: {
                     Text("3. AsyncAwaitCombine")
                 }
+                NavigationLink {
+                    MultiNavigationLink()
+                } label: {
+                    Text("4. MultiNavigationLink")
+                }
+                
             }
             .font(.title)
         }

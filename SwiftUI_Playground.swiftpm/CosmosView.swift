@@ -19,19 +19,23 @@ struct CosmosView: View {
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "plus.viewfinder")
-                    .onTapGesture {
-                        rating -= 0.1
-                    }
                 Text("rating = \(rating)")
-                Image(systemName: "minus.circle")
-                    .onTapGesture {
-                        rating += 0.1
-                    }
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                Stepper("", value: $rating, in: 0...5, step: 0.1)
+                    .background(Color.green)
             }
             Slider(value: $rating, in: 0...5, step: 0.1)
+                .accentColor(.red)
+                .onAppear {
+                    UISlider.appearance().thumbTintColor = .link
+                }
+                .padding()
             starsView
-                .overlay(overlayView)//.mask(starsView))
+                .overlay(overlayView.mask(starsView))
+                .frame(height: 20)
+                .background(Color.blue)
+            
         }
     }
     
@@ -75,5 +79,6 @@ struct CosmosView_Previews: PreviewProvider {
     
     static var previews: some View {
         CosmosView()
+//            .background(Color.)
     }
 }
