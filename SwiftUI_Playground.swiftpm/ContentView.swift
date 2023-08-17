@@ -25,7 +25,11 @@ struct ContentView: View {
                 } label: {
                     Text("4. MultiNavigationLink")
                 }
-                
+                NavigationLink {
+                    ExpandView()
+                } label: {
+                    Text("5. MultiNavigationLink")
+                }
             }
             .font(.title)
         }
