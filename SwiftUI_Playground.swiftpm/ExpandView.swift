@@ -10,8 +10,6 @@ import SwiftUI
 protocol SubItemType {
     
     associatedtype ItemType
-    
-    var array: [ItemType] { get set }
 }
 
 struct ColorList: SubItemType {

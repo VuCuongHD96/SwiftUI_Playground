@@ -30,6 +30,11 @@ struct ContentView: View {
                 } label: {
                     Text("5. MultiNavigationLink")
                 }
+                NavigationLink {
+                    NavigationViewFullColor()
+                } label: {
+                    Text("6. NavigationViewFullColor")
+                }
             }
             .font(.title)
         }
